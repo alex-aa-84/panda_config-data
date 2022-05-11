@@ -1,6 +1,5 @@
 #Application Configuration
 server:
-  port: 7050
   error:
     include-message: always
     include-binding-errors: always
@@ -12,8 +11,8 @@ spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://cheiru.mysql.database.azure.com/panda_tenant?useSSL=true&requireSSL=false&serverTimezone=UTC
-    username: alexisapp@cheiru
-    password: __melany1
+    username: ${USER_BD}
+    password: ${PASS_BD}
 
   # ===============================
   # JPA / HIBERNATE
@@ -34,4 +33,4 @@ logging:
 eureka:
   client:
     serviceUrl:
-      defaultZone: service-registry.azurewebsites.net/eureka/
+      defaultZone: https://service-registry.azurewebsites.net/eureka/

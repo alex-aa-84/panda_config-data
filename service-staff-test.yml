@@ -1,6 +1,5 @@
 #Application Configuration
 server:
-  port: 7051
   error:
     include-message: always
     include-binding-errors: always
@@ -34,5 +33,5 @@ logging:
 eureka:
   client:
     serviceUrl:
-      defaultZone: service-registry.azurewebsites.net/eureka/
+      defaultZone: https://service-registry.azurewebsites.net/eureka/
 

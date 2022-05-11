@@ -1,12 +1,9 @@
 #Application Configuration
-server:
-  port: 7001
-
 eureka:
   instance:
-    hostname: localhost
+    hostname: service-registry.azurewebsites.net
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl: 
-      defaulZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaulZone: https://${eureka.instance.hostname}/eureka/
