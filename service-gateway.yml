@@ -1,0 +1,24 @@
+#Application Configuration
+server:
+  port: 7002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: service-tenant
+          uri: lb://service-tenant
+          predicates:
+            - Path=/tenants/**
+        - id: service-staff-test
+          uri: lb://service-staff-test
+          predicates:
+            - Path=/staff-test
