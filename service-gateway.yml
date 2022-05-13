@@ -18,4 +18,4 @@ spring:
         - id: service-staff-test
           uri: lb://service-staff-test
           predicates:
-            - Path=/staff-test
+            - Path=/staff-test/**
