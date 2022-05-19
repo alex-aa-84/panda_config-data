@@ -11,8 +11,8 @@ spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://cheiru.mysql.database.azure.com/panda_tenant?useSSL=true&requireSSL=false&serverTimezone=UTC
-    username: ${USER_BD}
-    password: ${PASS_BD}
+    username: alexisapp@cheiru
+    password: __melany1
 
   # ===============================
   # JPA / HIBERNATE
