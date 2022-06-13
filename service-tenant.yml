@@ -8,9 +8,6 @@ server:
 # DB
 # ===============================
 spring:
-  application:
-    name: service-tenant
-
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://cheiru.mysql.database.azure.com/panda_tenant?useSSL=true&requireSSL=false&serverTimezone=UTC
@@ -30,15 +27,6 @@ spring:
         show_sql: true
         use_sql_comments: false
         format_sql: false
-
-  
-  # ===============================
-  # EUREKA
-  # ===============================
-  cloud:
-    config:
-      username: ${EUR_USER}
-      password: ${EUR_PASS}
 
 
   # ===============================
