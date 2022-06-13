@@ -1,0 +1,57 @@
+#Application Configuration
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+# ===============================
+# DB
+# ===============================
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://cheiru.mysql.database.azure.com/panda_tenant?useSSL=true&requireSSL=false&serverTimezone=UTC
+    username: ${USER_BD}
+    password: ${PASS_BD}
+
+  # ===============================
+  # JPA / HIBERNATE
+  # ===============================
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: false
+        format_sql: false
+
+
+  # ===============================
+  # SECURITY
+  # ===============================
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: https://login.microsoftonline.com/64826a44-1671-4394-9c87-68546cb42be6/discovery/v2.0/keys
+          issuer-uri: https://login.microsoftonline.com/64826a44-1671-4394-9c87-68546cb42be6/v2.0
+
+
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+  level:
+    org.springframework.security: DEBUG
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://service-registry.azurewebsites.net/eureka/
+
+settings:
+  cors_origin: http://localhost:4200
+
