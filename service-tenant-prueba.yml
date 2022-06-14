@@ -54,4 +54,5 @@ eureka:
 
 settings:
   cors_origin: http://localhost:4200
+  cors_origin_pro: https://appwwfdeploy.azurewebsites.net
 
