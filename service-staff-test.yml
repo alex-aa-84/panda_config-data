@@ -27,11 +27,30 @@ spring:
         show_sql: true
         use_sql_comments: false
         format_sql: false
+
+  # ===============================
+  # SECURITY -- Incluir Tenant
+  # ===============================
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: https://login.microsoftonline.com/64826a44-1671-4394-9c87-68546cb42be6/discovery/v2.0/keys
+          issuer-uri: https://login.microsoftonline.com/64826a44-1671-4394-9c87-68546cb42be6/v2.0        
+
 logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+  level:
+    org.springframework.security: DEBUG
+
 eureka:
   client:
     serviceUrl:
       defaultZone: https://service-registry.azurewebsites.net/eureka/
+
+settings:
+  cors_origin: http://localhost:4200
+  cors_origin_pro: https://gray-bush-0aeb0ca10.1.azurestaticapps.net
+
 
