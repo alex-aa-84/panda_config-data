@@ -28,15 +28,6 @@ spring:
         use_sql_comments: false
         format_sql: false
 
-  # ===============================
-  # SECURITY -- Incluir Tenant
-  # ===============================
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: https://login.microsoftonline.com/64826a44-1671-4394-9c87-68546cb42be6/discovery/v2.0/keys
-          issuer-uri: https://login.microsoftonline.com/64826a44-1671-4394-9c87-68546cb42be6/v2.0        
 
 logging:
   pattern:
