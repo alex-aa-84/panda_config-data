@@ -45,11 +45,6 @@ logging:
   level:
     org.springframework.security: DEBUG
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: https://service-registry.azurewebsites.net/eureka/
-
 settings:
   cors_origin: http://localhost:4200
   cors_origin_pro: https://gray-bush-0aeb0ca10.1.azurestaticapps.net
