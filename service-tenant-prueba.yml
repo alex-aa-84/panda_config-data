@@ -28,7 +28,6 @@ spring:
         use_sql_comments: false
         format_sql: false
 
-
   # ===============================
   # SECURITY
   # ===============================
@@ -45,7 +44,6 @@ logging:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
   level:
     org.springframework.security: DEBUG
-
 
 settings:
   cors_origin: http://localhost:4200
