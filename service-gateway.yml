@@ -18,8 +18,8 @@ spring:
         - id: service-staff-test
           uri: lb://service-staff-test
           predicates:
-            - Path=/staff-test/**
+            - Path=/staadmstaffwwf/**
         - id: service-tenant-prueba
           uri: lb://service-tenant-prueba
           predicates:
-            - Path=/staff-test/**
+            - Path=/tenants/**
