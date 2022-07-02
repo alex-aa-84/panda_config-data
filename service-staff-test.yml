@@ -35,8 +35,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: https://login.microsoftonline.com/64826a44-1671-4394-9c87-68546cb42be6/discovery/v2.0/keys
-          issuer-uri: https://login.microsoftonline.com/64826a44-1671-4394-9c87-68546cb42be6/v2.0    
+          jwk-set-uri: https://login.microsoftonline.com/3363f614-6ea7-4f25-bc97-aadc48a24082/discovery/v2.0/keys
+          issuer-uri: https://login.microsoftonline.com/63363f614-6ea7-4f25-bc97-aadc48a24082/v2.0    
 
 
 logging:
